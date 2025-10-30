@@ -12,12 +12,22 @@ $(document).ready(function () {
 
 var btnSend = document.getElementById("btn-send");
 
-btnSend.addEventListener('click', function() {
-    var nameForm = document.getElementById("Name").value;
-    var emailForm = document.getElementById("Email").value;
-    var websiteForm = document.getElementById("Website").value;
+btnSend.addEventListener('click', function () {
+    var name = document.getElementById("Name").value.trim();
+    var email = document.getElementById("Email").value.trim();
+    var subject = document.getElementById("Subject").value.trim();
+    var message = document.getElementById("Message").value.trim();
 
-    if (nameForm === "" || emailForm === "" || websiteForm === "") {
-        alert("Vui lòng nhập đủ thông tin");
+    if (name === "" || email === "" || subject === "" || message === "") {
+        alert("Vui lòng nhập đầy đủ thông tin: Name, Email, Subject, Message");
+        return;
     }
+
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        alert("Email không đúng định dạng");
+        return;
+    }
+
+    alert("Gửi thành công!");
 });

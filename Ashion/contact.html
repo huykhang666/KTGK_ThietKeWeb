@@ -153,37 +153,39 @@
                             <form id="form-message">
                                 <input id="Name" type="text" placeholder="Name">
                                 <input id="Email" type="email" placeholder="Email">
-                                <input id="Website" type="website" placeholder="Website">
+                                <input id="Website" type="text" placeholder="Website">
+                                <input id="Subject" type="text" placeholder="Subject">
+
                                 <h5>Gender</h5>
                                 <div class="radio-group">
-
                                     <label class="custom-radio">
                                         <input type="radio" name="gender-custom" value="male">
-                                        <span class="radio-circle"></span>
-                                        Male
+                                        <span class="radio-circle"></span> Male
                                     </label>
-
                                     <label class="custom-radio">
                                         <input type="radio" name="gender-custom" value="female">
-                                        <span class="radio-circle"></span>
-                                        Female
+                                        <span class="radio-circle"></span> Female
                                     </label>
-
                                     <label class="custom-radio">
                                         <input type="radio" name="gender-custom" value="other">
-                                        <span class="radio-circle"></span>
-                                        Other
-                                    </label><br>
+                                        <span class="radio-circle"></span> Other
+                                    </label>
                                 </div>
-                                <select>
-                                        <option value="">Select a topic</option>
-                                        <option value="">Select a topic</option>
-                                </select><br>
+
+                                <select id="Topic">
+                                    <option value="">Select a topic</option>
+                                    <option value="feedback">Feedback</option>
+                                    <option value="support">Support</option>
+                                </select>
+
                                 <div style="margin-top: 10px;">
-                                    <textarea rows="5" placeholder="Message"></textarea>
+                                    <textarea id="Message" rows="5" placeholder="Message"></textarea>
                                 </div>
+
+                                <button id="btn-send" type="button"
+                                    style="padding: 8px; border: none; background-color: red; color: white; border-radius: 8px;">SEND
+                                    MESSAGE</button>
                             </form>
-                            <button id="btn-send"  style="padding: 8px; border: none; background-color: red; color: white; border-radius: 8px;">SEND MESSAGE</button>
                         </div>
                     </div>
                 </div>
